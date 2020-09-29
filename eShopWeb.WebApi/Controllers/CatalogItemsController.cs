@@ -14,24 +14,23 @@ namespace eShopWeb.WebApi.Controllers
     [ApiController]
     public class CatalogItemsController : ControllerBase
     {
-        //private readonly ICatagoryItemService _catagoryItemService;
+        private readonly ICatagoryItemService _catagoryItemService;
 
-        //public CatalogItemsController(ICatagoryItemService catagoryItemService)
-        //{
-        //    _catagoryItemService = catagoryItemService;
-        //}
+        public CatalogItemsController(ICatagoryItemService catagoryItemService)
+        {
+            _catagoryItemService = catagoryItemService;
+        }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Ok();
-            //try
-            //{
-            //    return Ok(await _catagoryItemService.GetAll());
-            //}
-            //catch (Exception )
-            //{
-            //    throw new ArgumentNullException(nameof(_catagoryItemService));
-            //}
+            try
+            {
+                return Ok(await _catagoryItemService.GetAll());
+            }
+            catch (Exception)
+            {
+                throw new ArgumentNullException(nameof(_catagoryItemService));
+            }
         }
     }
 }

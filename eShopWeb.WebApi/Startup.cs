@@ -32,8 +32,8 @@ namespace eShopWeb.WebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<ShopWebContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Default")));
-            //services.AddScoped(typeof(IAsyncRepository<>),typeof(EfRepository<>));
-            //services.AddScoped(typeof(ICatagoryItemService), typeof(CatalogItemsService));
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
+            services.AddScoped(typeof(ICatagoryItemService), typeof(CatalogItemsService));
             services.AddSwaggerGen();
         }
 
@@ -45,7 +45,10 @@ namespace eShopWeb.WebApi
                 app.UseDeveloperExceptionPage();
             }
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseMvc();
         }
     }

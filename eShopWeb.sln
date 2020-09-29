@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopWeb.Core", "eShopWeb.Core\eShopWeb.Core.csproj", "{94C2F034-21D6-4F9F-A33D-BCD231F32BDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShopWeb.Core", "eShopWeb.Core\eShopWeb.Core.csproj", "{94C2F034-21D6-4F9F-A33D-BCD231F32BDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopWeb.Infrastructure", "eShopWeb.Infrastructure\eShopWeb.Infrastructure.csproj", "{096C9BBB-BBF4-4E61-A6DC-A1A64A0D1EEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShopWeb.Infrastructure", "eShopWeb.Infrastructure\eShopWeb.Infrastructure.csproj", "{096C9BBB-BBF4-4E61-A6DC-A1A64A0D1EEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopWeb.WebApi", "eShopWeb.WebApi\eShopWeb.WebApi.csproj", "{DBFF99ED-E1B0-464F-BAE2-E847B2FA9FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShopWeb.WebApi", "eShopWeb.WebApi\eShopWeb.WebApi.csproj", "{DBFF99ED-E1B0-464F-BAE2-E847B2FA9FF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
