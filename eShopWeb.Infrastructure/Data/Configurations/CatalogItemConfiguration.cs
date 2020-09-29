@@ -16,6 +16,7 @@ namespace eShopWeb.Infrastructure.Data.Configurations
             builder.Property(x => x.ProductName)
                 .HasMaxLength(50)
                 .IsRequired(true);
+            
 
             builder.Property(x => x.ProductCode).IsRequired(false);
 
