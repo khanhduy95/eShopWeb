@@ -4,44 +4,65 @@ class ProductItem extends Component {
     state = {  }
     render() { 
         return (  
-
-            <div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-            </div>
+            <div className="row">
+        <div className="col-md-4">
+          <figure className="card card-product">
+            <div className="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg" /></div>
+            <figcaption className="info-wrap">
+              <h4 className="title">Another name of item</h4>
+              <p className="desc">Some small description goes here</p>
+              <div className="rating-wrap">
+                <div className="label-rating">132 reviews</div>
+                <div className="label-rating">154 orders </div>
+              </div> {/* rating-wrap.// */}
+            </figcaption>
+            <div className="bottom-wrap">
+              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
+              <div className="price-wrap h5">
+                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
+              </div> {/* price-wrap.// */}
+            </div> {/* bottom-wrap.// */}
+          </figure>
+        </div> {/* col // */}
+        <div className="col-md-4">
+          <figure className="card card-product">
+            <div className="img-wrap"><img src="https://s9.postimg.org/ojb106167/image.jpg" /> </div>
+            <figcaption className="info-wrap">
+              <h4 className="title">Good product</h4>
+              <p className="desc">Some small description goes here</p>
+              <div className="rating-wrap">
+                <div className="label-rating">132 reviews</div>
+                <div className="label-rating">154 orders </div>
+              </div> {/* rating-wrap.// */}
+            </figcaption>
+            <div className="bottom-wrap">
+              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
+              <div className="price-wrap h5">
+                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
+              </div> {/* price-wrap.// */}
+            </div> {/* bottom-wrap.// */}
+          </figure>
+        </div> {/* col // */}
+        <div className="col-md-4">
+          <figure className="card card-product">
+            <div className="img-wrap"><img src="https://s9.postimg.org/4ooze1tof/image.jpg" /></div>
+            <figcaption className="info-wrap">
+              <h4 className="title">Product name goes here</h4>
+              <p className="desc">Some small description goes here</p>
+              <div className="rating-wrap">
+                <div className="label-rating">132 reviews</div>
+                <div className="label-rating">154 orders </div>
+              </div> {/* rating-wrap.// */}
+            </figcaption>
+            <div className="bottom-wrap">
+              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
+              <div className="price-wrap h5">
+                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
+              </div> {/* price-wrap.// */}
+            </div> {/* bottom-wrap.// */}
+          </figure>
+        </div> {/* col // */}
+      </div> 
         );
     }
 }

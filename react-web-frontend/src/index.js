@@ -7,11 +7,16 @@ import ProductItem from './Components/ProductItemCompopent';
 import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
   <React.StrictMode>
-    <ProductItem  />
+    <App  />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
+ReactDOM.render(
+  <React.StrictMode>
+    <ProductItem  />
+  </React.StrictMode>,
+  document.getElementById('root2')
+);
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
