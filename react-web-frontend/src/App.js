@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand" href="#">
           Navbar
         </a>

@@ -1,69 +1,116 @@
 import React, { Component } from 'react';
+import "./css/Demo.css";
 
 class ProductItem extends Component {
     state = {  }
     render() { 
         return (  
-            <div className="row">
-        <div className="col-md-4">
-          <figure className="card card-product">
-            <div className="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg" /></div>
-            <figcaption className="info-wrap">
-              <h4 className="title">Another name of item</h4>
-              <p className="desc">Some small description goes here</p>
-              <div className="rating-wrap">
-                <div className="label-rating">132 reviews</div>
-                <div className="label-rating">154 orders </div>
-              </div> {/* rating-wrap.// */}
-            </figcaption>
-            <div className="bottom-wrap">
-              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
-              <div className="price-wrap h5">
-                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
-              </div> {/* price-wrap.// */}
-            </div> {/* bottom-wrap.// */}
-          </figure>
-        </div> {/* col // */}
-        <div className="col-md-4">
-          <figure className="card card-product">
-            <div className="img-wrap"><img src="https://s9.postimg.org/ojb106167/image.jpg" /> </div>
-            <figcaption className="info-wrap">
-              <h4 className="title">Good product</h4>
-              <p className="desc">Some small description goes here</p>
-              <div className="rating-wrap">
-                <div className="label-rating">132 reviews</div>
-                <div className="label-rating">154 orders </div>
-              </div> {/* rating-wrap.// */}
-            </figcaption>
-            <div className="bottom-wrap">
-              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
-              <div className="price-wrap h5">
-                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
-              </div> {/* price-wrap.// */}
-            </div> {/* bottom-wrap.// */}
-          </figure>
-        </div> {/* col // */}
-        <div className="col-md-4">
-          <figure className="card card-product">
-            <div className="img-wrap"><img src="https://s9.postimg.org/4ooze1tof/image.jpg" /></div>
-            <figcaption className="info-wrap">
-              <h4 className="title">Product name goes here</h4>
-              <p className="desc">Some small description goes here</p>
-              <div className="rating-wrap">
-                <div className="label-rating">132 reviews</div>
-                <div className="label-rating">154 orders </div>
-              </div> {/* rating-wrap.// */}
-            </figcaption>
-            <div className="bottom-wrap">
-              <a href className="btn btn-sm btn-primary float-right">Order Now</a>	
-              <div className="price-wrap h5">
-                <span className="price-new">$1280</span> <del className="price-old">$1980</del>
-              </div> {/* price-wrap.// */}
-            </div> {/* bottom-wrap.// */}
-          </figure>
-        </div> {/* col // */}
-      </div> 
-        );
+          
+            <div class="container">
+                <div className="row">
+        <div className="col-md-3 col-sm-6">
+          <div className="product-grid4">
+            <div className="product-image4">
+              <a href="#">
+                <img className="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg" />
+                <img className="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg" />
+              </a>
+              <ul className="social">
+                <li><a href="#" data-tip="Quick View"><i className="fa fa-eye" /></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i className="fa fa-shopping-bag" /></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i className="fa fa-shopping-cart" /></a></li>
+              </ul>
+              <span className="product-new-label">New</span>
+              <span className="product-discount-label">-10%</span>
+            </div>
+            <div className="product-content">
+              <h3 className="title"><a href="#">Women's Black Top</a></h3>
+              <div className="price">
+                $14.40
+                <span>$16.00</span>
+              </div>
+              <a className="add-to-cart" href>ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6">
+          <div className="product-grid4">
+            <div className="product-image4">
+              <a href="#">
+                <img className="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-3.jpg" />
+                <img className="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-4.jpg" />
+              </a>
+              <ul className="social">
+                <li><a href="#" data-tip="Quick View"><i className="fa fa-eye" /></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i className="fa fa-shopping-bag" /></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i className="fa fa-shopping-cart" /></a></li>
+              </ul>
+              <span className="product-discount-label">-12%</span>
+            </div>
+            <div className="product-content">
+              <h3 className="title"><a href="#">Men's Blue Shirt</a></h3>
+              <div className="price">
+                $17.60
+                <span>$20.00</span>
+              </div>
+              <a className="add-to-cart" href>ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6">
+          <div className="product-grid4">
+            <div className="product-image4">
+              <a href="#">
+                <img className="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-5.jpg" />
+                <img className="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-6.jpg" />
+              </a>
+              <ul className="social">
+                <li><a href="#" data-tip="Quick View"><i className="fa fa-eye" /></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i className="fa fa-shopping-bag" /></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i className="fa fa-shopping-cart" /></a></li>
+              </ul>
+              <span className="product-new-label">New</span>
+              <span className="product-discount-label">-10%</span>
+            </div>
+            <div className="product-content">
+              <h3 className="title"><a href="#">Women's Black Top</a></h3>
+              <div className="price">
+                $14.40
+                <span>$16.00</span>
+              </div>
+              <a className="add-to-cart" href>ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6">
+          <div className="product-grid4">
+            <div className="product-image4">
+              <a href="#">
+                <img className="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-7.jpg" />
+                <img className="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-8.jpg" />
+              </a>
+              <ul className="social">
+                <li><a href="#" data-tip="Quick View"><i className="fa fa-eye" /></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i className="fa fa-shopping-bag" /></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i className="fa fa-shopping-cart" /></a></li>
+              </ul>
+              <span className="product-new-label">New</span>
+              <span className="product-discount-label">-10%</span>
+            </div>
+            <div className="product-content">
+              <h3 className="title"><a href="#">Women's Black Top</a></h3>
+              <div className="price">
+                $14.40
+                <span>$16.00</span>
+              </div>
+              <a className="add-to-cart" href>ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+          
+        )
     }
 }
  
