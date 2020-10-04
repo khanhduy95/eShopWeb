@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eShopWeb.Api.Application.IServices;
+using eShopWeb.Api.Application.Services;
 using eShopWeb.Core.Interfaces;
 using eShopWeb.Infrastructure;
 using eShopWeb.Infrastructure.Data;
-using eShopWeb.WebApi.Application.IServices;
-using eShopWeb.WebApi.Application.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace eShopWeb.WebApi
+namespace eShopWeb.Api
 {
     public class Startup
     {
@@ -42,7 +43,7 @@ namespace eShopWeb.WebApi
                 options.AddPolicy(MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:3000")
+                                      builder.WithOrigins("http://localhost:3000/")
                                                           .AllowAnyHeader()
                                                           .AllowAnyMethod();
                                   });
@@ -54,7 +55,7 @@ namespace eShopWeb.WebApi
             {
                 app.UseDeveloperExceptionPage();
             };
-          
+
             app.UseSwagger();
             app.UseCors("_myAllowSpecificOrigins");
             app.UseSwaggerUI(c =>

@@ -1,14 +1,14 @@
 ﻿using eShopWeb.Core.Entities;
 using eShopWeb.Core.Interfaces;
-using eShopWeb.WebApi.Application.IServices;
-using eShopWeb.WebApi.Application.ModelView;
+using eShopWeb.Api.Application.IServices;
+using eShopWeb.Api.Application.ModelView;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopWeb.WebApi.Application.Services
+namespace eShopWeb.Api.Application.Services
 {
     public class CatalogItemsService : ICatagoryItemService
     {
