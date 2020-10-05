@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import ProductItem from './Components/ProductItemCompopent';
+import ProductItem from './Components/Product/ProductItem';
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
