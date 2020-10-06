@@ -1,4 +1,5 @@
 ﻿using eShopWeb.Api.Application.ModelView;
+using eShopWeb.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace eShopWeb.Api.Application.IServices
 {
-    public interface ICatalogItemService
+    public interface ICatalogTypeService
     {
-        Task<IEnumerable<CatalogItemModel>> GetAll();
-        void CreateCataLogItem(CatalogItemModel catalogItem);
+        Task<IEnumerable<CatalogTypeViewModel>> GetAll();
+
+
     }
 }

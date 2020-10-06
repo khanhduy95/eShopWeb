@@ -35,8 +35,11 @@ namespace eShopWeb.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<ShopWebContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Default")));
+
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
-            services.AddScoped(typeof(ICatagoryItemService), typeof(CatalogItemsService));
+            services.AddScoped(typeof(ICatalogItemService), typeof(CatalogItemsService));
+            services.AddScoped(typeof(ICatalogTypeService), typeof(CatalogTypeService));
+
             services.AddSwaggerGen();
             services.AddCors(options =>
             {

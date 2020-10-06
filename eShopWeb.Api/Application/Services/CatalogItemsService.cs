@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eShopWeb.Api.Application.Services
 {
-    public class CatalogItemsService : ICatagoryItemService
+    public class CatalogItemsService : ICatalogItemService
     {
         private readonly IAsyncRepository<CatalogItem> _catalogItemRepository;
 
