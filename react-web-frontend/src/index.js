@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import ProductItem from './Components/Product/ProductItem';
 import 'bootstrap/dist/css/bootstrap.css';
-import Test from './Components/Product/test';
+import App from './App';
+
 ReactDOM.render(
   <React.StrictMode>
-    <Test  />
+    <App  />
   </React.StrictMode>,
   document.getElementById('root')
 );

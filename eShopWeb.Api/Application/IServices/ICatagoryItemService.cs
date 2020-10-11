@@ -9,6 +9,7 @@ namespace eShopWeb.Api.Application.IServices
     public interface ICatalogItemService
     {
         Task<IEnumerable<CatalogItemModel>> GetAll();
+        Task<IEnumerable<CatalogItemModel>> GetAll(int id);
         void CreateCataLogItem(CatalogItemModel catalogItem);
     }
 }

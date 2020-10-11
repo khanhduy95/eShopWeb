@@ -25,9 +25,19 @@ namespace eShopWeb.Api.Application.Services
             listTypes = catalogTypes.Select(x => new CatalogTypeViewModel
             {
                 CatalogCode = x.CatalogCode,
-                CatalogId=x.Id,
-                CatalogName=x.CatalogName
+                CatalogId = x.Id,
+                CatalogName = x.CatalogName
             }).ToList();
+
+            //foreach(var i in catalogTypes)
+            //{
+            //    var catalogType = new CatalogTypeViewModel {
+            //        CatalogId = i.CatalogID,
+            //        CatalogName=i.CatalogName
+            //    };
+            //    listTypes.Add(catalogType);
+
+            //}
 
             return listTypes;
         }

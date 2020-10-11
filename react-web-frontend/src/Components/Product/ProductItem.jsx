@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { baseUrl } from "../../BaseUrl";
 class ProductItem extends Component {
   constructor(props) {
     super();
     this.state = {
-      url: baseUrl,
       product: [],
     };
   }

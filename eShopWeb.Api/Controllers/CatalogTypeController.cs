@@ -22,6 +22,7 @@ namespace eShopWeb.Api.Controllers
             _catalogTypeService = catalogTypeService;
         }
 
+        [Route("")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

@@ -43,6 +43,25 @@ namespace eShopWeb.Api.Application.Services
                 itemsModel.Add(catalogItem);
             }
             return itemsModel;
-        } 
+        }
+
+        public async Task<IEnumerable<CatalogItemModel>> GetAll(int id)
+        {
+            var catalogItems = await _catalogItemRepository.ListAllAsync();
+            var itemsModel = new List<CatalogItemModel>();
+
+            itemsModel = catalogItems.Where(x => x.CatalogTypeID == id)
+                .Select(x => new CatalogItemModel
+                {
+                    ProductId=x.ProductID,
+                    ProductName=x.ProductName,
+                    CatalogTypeId=x.CatalogTypeID,
+                    Price=x.Price,
+                    Description=x.Description,
+
+                }).ToList();
+
+            return itemsModel;
+        }
     }
 }

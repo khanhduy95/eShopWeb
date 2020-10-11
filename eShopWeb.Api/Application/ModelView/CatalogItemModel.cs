@@ -27,6 +27,7 @@ namespace eShopWeb.Api.Application.ModelView
         }
         public int ProductId { get; set; }
         public string ProductCode { get; set; }
+        public int CatalogTypeId { get; set; }
         public string ProductName { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }

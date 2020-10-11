@@ -16,18 +16,34 @@ namespace eShopWeb.Api.Controllers
     [EnableCors("_myAllowSpecificOrigins")]
     public class CatalogItemsController : ControllerBase
     {
-        private readonly ICatalogTypeService _catagoryItemService;
+        private readonly ICatalogItemService _catagoryItemService;
 
-        public CatalogItemsController(ICatalogTypeService catagoryItemService)
+        public CatalogItemsController(ICatalogItemService catagoryItemService)
         {
             _catagoryItemService = catagoryItemService;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             try
             {
                 return Ok(await _catagoryItemService.GetAll());
+            }
+            catch (Exception)
+            {
+                throw new ArgumentNullException(nameof(_catagoryItemService));
+            }
+        }
+
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetAll(int id)
+        {
+            try
+            {
+                return Ok(await _catagoryItemService.GetAll(id));
             }
             catch (Exception)
             {
