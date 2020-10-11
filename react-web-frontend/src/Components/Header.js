@@ -5,8 +5,8 @@ class Header extends Component {
     render() { 
         return ( 
             <nav className="navbar bg-light">
-            <Link to="/">
-            <a href="#" className="navbar-brand">eShopWeb</a>
+            <Link className="navbar-brand" to="/">
+                eShopWeb
             </Link>
            
                 <ul className="nav mr-auto">
@@ -23,13 +23,13 @@ class Header extends Component {
                       </div>
                     </li>
                     <li className="nav-item">
-                        <Link to="/About">
-                        <a className="nav-link" href="#">About</a>
+                        <Link className="nav-link" to="/About">
+                            About
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Contact">
-                         <a className="nav-link " href="#"> Contact </a>
+                        <Link className="nav-link " to="/Contact">
+                             Contact 
                         </Link>
                     </li>
                 </ul>

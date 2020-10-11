@@ -15,19 +15,30 @@ class App extends Component {
               <Router>
                   <Header />
                     <Switch>
-                        {this.showRoutes(routes)}
-                        <Route
-                        path='/Contact'
-                        component={Contact}
-                    />
+                        {/* {this.showRoutes(routes)} */}
+                        {routes.map((route,key)=>{
+                            console.log(route.main);
+                            return  (
+                                <Route
+                                    key={key}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.main}
+                                />
+                            )
+                        })}
+                         {/* <Route
+                                    path='/Contact'
+                                    component={Contact}
+                                /> */}
                     </Switch>
               </Router>     
 
         )
     }
-    showRoutes =(routes)=>{
+    showRoutes = (routes) =>{
         let result=null;
-        if(routes.lenght>0){
+        if(routes.lenght >0){
             result = routes.map((route,key)=>{
                 return  (
                     <Route
