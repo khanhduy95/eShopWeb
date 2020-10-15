@@ -1,33 +1,32 @@
 import React, {
     Component
 } from 'react';
-import Home from './Components/Home';
-import About from './Components/About';
-import CatalogType from './Components/CatalogType';
-import Contact from './Components/Contact';
-
+import HomePage from '../src/pages/HomePage/HomePage';
+import AboutPage from '../src/pages/AboutPage/AboutPage';
+import CatalogTypePage from '../src/pages/CatalogTypePage/CatalogTypePage';
+import ContactPage from './pages/ContactPage/ContactPage';
 const routes = [{
         path: '/',
         exact: true,
-        main: () => <Home />
+        main: () => <HomePage />
     },
     
     {
         path: '/About',
         exact: false,
-        main: () => <About />
+        main: () => <AboutPage />
     },
     {
         path: '/Contact',
         exact: false,
-        main: () => <Contact />
+        main: () => <ContactPage />
     },
     {
-        path: '/',
+        path: '/Product/:id',
         exact: false,
-        main: () => <CatalogType />
+        main: ({match}) => <CatalogTypePage match={match}/>
     },
-  
+    
 ];
 
 export default routes;
