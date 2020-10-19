@@ -5,10 +5,11 @@ import HomePage from '../src/pages/HomePage/HomePage';
 import AboutPage from '../src/pages/AboutPage/AboutPage';
 import CatalogTypePage from '../src/pages/CatalogTypePage/CatalogTypePage';
 import ContactPage from './pages/ContactPage/ContactPage';
+import ProductContainer from './containers/productContainer'
 const routes = [{
         path: '/',
         exact: true,
-        main: () => <HomePage />
+        main: () => <ProductContainer />
     },
     
     {

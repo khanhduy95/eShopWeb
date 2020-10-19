@@ -6,21 +6,29 @@ class ProductItem extends Component {
       product: [],
     };
   }
-
+  addToCart = () =>{
+        
+  }
   render() {
+    var {data}=this.props
     return (
-      <div>
-        <h1>{this.props.Id}</h1>
-        <h1>{this.props.Name}</h1>
-        {this.state.product.map((data, key) => {
-          return (
-            <tr>
-              <td>{data.catalogId}</td>
-              <td>{data.catalogName}</td>
-            </tr>
-          );
-        })}
+      <div className="col-4">
+      <div className="card">
+        <img
+          className="card-img-top"
+          src="https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
+          alt=""
+        />
+        <div className="card-body">
+          <h5 className="card-title">{data.name}</h5>
+          <p className="card-text">{data.price}</p>
+         <div className="row mr-auto">
+           <div className="col"><button className="btn btn-danger">Add to cart</button></div>
+           <div className="col"><button className="btn btn-danger">View Detail</button></div>
+         </div>
+        </div>
       </div>
+    </div>
     );
   }
 }

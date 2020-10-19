@@ -53,6 +53,11 @@ class NavbarMenu extends Component {
               Contact
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/Contact">
+              Cart
+            </Link>
+          </li>
         </ul>
       </nav>
     );
