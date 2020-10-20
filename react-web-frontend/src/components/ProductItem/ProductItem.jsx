@@ -23,13 +23,16 @@ class ProductItem extends Component {
           <h5 className="card-title">{data.name}</h5>
           <p className="card-text">{data.price}</p>
          <div className="row mr-auto">
-           <div className="col"><button className="btn btn-danger">Add to cart</button></div>
+           <div className="col"><button onClick={() => this.onAddToCart(data)} className="btn btn-danger">Add to cart</button></div>
            <div className="col"><button className="btn btn-danger">View Detail</button></div>
          </div>
         </div>
       </div>
     </div>
     );
+  }
+  onAddToCart = (product) =>{
+    this.props.onAddToCart(product);
   }
 }
 

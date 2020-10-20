@@ -1,9 +1,12 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 class Cart extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>DDD</div>
+            <div>
+                {this.props.children}
+
+            </div>
          );
     }
 }

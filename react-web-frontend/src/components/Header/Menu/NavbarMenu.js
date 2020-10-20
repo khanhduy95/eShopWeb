@@ -54,7 +54,7 @@ class NavbarMenu extends Component {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Contact">
+            <Link className="nav-link" to="/Cart">
               Cart
             </Link>
           </li>

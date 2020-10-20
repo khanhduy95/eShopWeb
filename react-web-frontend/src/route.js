@@ -1,11 +1,12 @@
 import React, {
     Component
 } from 'react';
-import HomePage from '../src/pages/HomePage/HomePage';
 import AboutPage from '../src/pages/AboutPage/AboutPage';
 import CatalogTypePage from '../src/pages/CatalogTypePage/CatalogTypePage';
 import ContactPage from './pages/ContactPage/ContactPage';
-import ProductContainer from './containers/productContainer'
+import ProductContainer from './containers/productContainer';
+import CartContainer from './containers/cartContainer'
+
 const routes = [{
         path: '/',
         exact: true,
@@ -27,7 +28,11 @@ const routes = [{
         exact: false,
         main: ({match}) => <CatalogTypePage match={match}/>
     },
-    
+    {
+        path: '/Cart',
+        exact: true,
+        main: () => <CartContainer />
+    },
 ];
 
 export default routes;

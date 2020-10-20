@@ -3,27 +3,42 @@ import {connect} from 'react-redux';
 import HomePage from '../pages/HomePage/HomePage';
 import ProductItem from '../components/ProductItem/ProductItem';
 import PropTypes from 'prop-types';
-import { propTypes } from 'react-bootstrap/esm/Image';
-
+import { actAddToCart } from '../actions/index';
 class ProductContainer extends Component {
-
+    constructor(props){
+        super();
+        this.state={
+            products:[]
+        }
+    }
+    componentDidMount(){
+        fetch("https://localhost:44349/api/CatalogItems")
+        .then(res=>res.json())
+        .then(data=>
+             this.setState({
+                 products:data
+            }))
+    }
     render() { 
        
-        var {products} = this.props;
+        // var {products} = this.props;
+       
         return (
                 <HomePage>
-                    {this.showProduct(products)}
+                    {this.showProduct(this.state.products)}
                 </HomePage>
             );
     }
             
     showProduct(products){
         var result = null;
+        var {onAddToCart} =this.props
         if (products.length > 0){
             result = products.map((data,key)=>{
                     return <ProductItem
                             key={key}
                             data = {data}
+                            onAddToCart = {onAddToCart}
                             />
                 })
         }
@@ -42,12 +57,21 @@ ProductContainer.propTypes ={
 }
 
 const mapStateToPros = state =>{
+    // var pro=null;
     // fetch("https://localhost:44349/api/CatalogItems")
     // .then(res=>res.json())
     // .then(data=>
-    //     state = data 
+    //     prop = data 
     //  );
     return {products : state.products}
 } 
  
-export default connect(mapStateToPros,null)(ProductContainer);
+const mapDispatchToProps = (dispatch,props) =>{
+    return {
+        onAddToCart : (product) =>{
+            dispatch(actAddToCart(product,1))
+        }
+    }
+}
+
+export default connect(null,mapDispatchToProps)(ProductContainer);
