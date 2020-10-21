@@ -3,10 +3,19 @@ class CartComponent extends Component {
     state = {  }
     render() { 
         var {data} = this.props;
-        console.log(data)
+        console.log("aasd",data)
         return ( 
             <div>
-                {data.productName}
+                <table>
+                    <tr>
+                        <td>name</td>
+                        <td>quantity</td>
+                    </tr>
+                    <tr>
+                        <td>{data.product.productName}</td>
+                        <td>{data.quantity}</td>
+                    </tr>
+                </table>
             </div>
          );
     }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
 import Cart from '../pages/CartPage/Cart';
 import CartComponent from '../components/Cart/cartComponent';
 
@@ -21,7 +20,6 @@ class CartContainer extends Component {
         var result = null;
         if (products.length > 0){
             result = products.map((data,key)=>{
-                console.log("sss",data)
                     return <CartComponent
                             key={key}
                             data = {data}
@@ -48,7 +46,7 @@ const mapStateToPros = state =>{
     // .then(data=>
     //     state = data 
     //  );
-    return {cart : state.product}
+    return {cart : state.cart}
 } 
  
 export default connect(mapStateToPros,null)(CartContainer);

@@ -63,7 +63,7 @@ const mapStateToPros = state =>{
     // .then(data=>
     //     prop = data 
     //  );
-    return {products : state.products}
+    return {products : state.cart}
 } 
  
 const mapDispatchToProps = (dispatch,props) =>{
@@ -74,4 +74,4 @@ const mapDispatchToProps = (dispatch,props) =>{
     }
 }
 
-export default connect(null,mapDispatchToProps)(ProductContainer);
+export default connect(mapStateToPros,mapDispatchToProps)(ProductContainer);
