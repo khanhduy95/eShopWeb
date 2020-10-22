@@ -6,9 +6,7 @@ class ProductItem extends Component {
       product: [],
     };
   }
-  addToCart = () =>{
-        
-  }
+ 
   render() {
     var {data}=this.props
     return (

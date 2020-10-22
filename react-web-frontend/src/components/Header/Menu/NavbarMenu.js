@@ -23,21 +23,20 @@ class NavbarMenu extends Component {
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
                 aria-haspopup="true"
-                aria-expanded="false"
-              >
+                aria-expanded="false">
                 Dropdown button
               </button>
               <div
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
               >
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="sss">
                   Action
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="sss">
                   Another action
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="ddd">
                   Something else here
                 </a>
               </div>
@@ -63,5 +62,5 @@ class NavbarMenu extends Component {
     );
   }
 }
- 
+
 export default NavbarMenu;

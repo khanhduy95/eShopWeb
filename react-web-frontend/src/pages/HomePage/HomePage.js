@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import callApi from '../../utils/apiCaller';
 import BaseApi from '../../constants/config';
 class HomePage extends Component {
 

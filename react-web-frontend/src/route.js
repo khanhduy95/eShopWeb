@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from 'react';
+import React from 'react';
 import AboutPage from '../src/pages/AboutPage/AboutPage';
 import CatalogTypePage from '../src/pages/CatalogTypePage/CatalogTypePage';
 import ContactPage from './pages/ContactPage/ContactPage';

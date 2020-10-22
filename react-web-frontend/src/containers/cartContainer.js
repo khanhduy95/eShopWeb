@@ -1,33 +1,28 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import Cart from '../pages/CartPage/Cart';
-import CartComponent from '../components/Cart/cartComponent';
-
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Cart from "../pages/CartPage/Cart";
+import CartComponent from "../components/Cart/cartComponent";
+import { actRemoveItem } from "../actions/index";
 class CartContainer extends Component {
+  render() {
+    var { cart } = this.props;
+    return <Cart> {this.showProduct(cart)}</Cart>;
+  }
 
-    render() { 
-       
-        var {cart} = this.props;
-        return (
-                <Cart>
-                    {this.showProduct(cart)}
-                </Cart>
-            );
+  showProduct(products) {
+    var result = null;
+    let {removeItem} = this.props;
+    if (products.length > 0) {
+      result = products.map((data, key) => {
+        return <CartComponent 
+            key={key} 
+            data={data} 
+            removeItem = {removeItem}
+            />;
+      });
     }
-            
-    showProduct(products){
-        var result = null;
-        if (products.length > 0){
-            result = products.map((data,key)=>{
-                    return <CartComponent
-                            key={key}
-                            data = {data}
-                            />
-                })
-        }
-        return result;
-    }            
+    return result;
+  }
 }
 
 // CartComponent.propTypes ={
@@ -40,13 +35,21 @@ class CartContainer extends Component {
 //     ).isRequired
 // }
 
-const mapStateToPros = state =>{
-    // fetch("https://localhost:44349/api/CatalogItems")
-    // .then(res=>res.json())
-    // .then(data=>
-    //     state = data 
-    //  );
-    return {cart : state.cart}
-} 
- 
-export default connect(mapStateToPros,null)(CartContainer);
+const mapStateToPros = (state) => {
+  // fetch("https://localhost:44349/api/CatalogItems")
+  // .then(res=>res.json())
+  // .then(data=>
+  //     state = data
+  //  );
+  return { cart: state.cart };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    removeItem: (id) => {
+      dispatch(actRemoveItem(id));
+    },
+  };
+};
+
+export default connect(mapStateToPros, mapDispatchToProps)(CartContainer);
