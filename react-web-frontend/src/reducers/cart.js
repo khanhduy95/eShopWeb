@@ -32,6 +32,7 @@ const cart = (state = initialState, action) => {
       state.forEach((element, i) => {
         if (element.product.productId === id) {
           state.splice(i, 1);
+          return false;
         }
       });
       localStorage.setItem("CART", JSON.stringify(state));

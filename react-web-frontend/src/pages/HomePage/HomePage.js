@@ -10,20 +10,20 @@ class HomePage extends Component {
         // };
     }
 
-    componentDidMount(){
-        fetch("https://localhost:44349/api/CatalogItems")
-        .then(res=>res.json())
-        .then(data=>
-             this.setState({
-                 products:data
-            }))
+    // componentDidMount(){
+    //     fetch("https://localhost:44349/api/CatalogItems")
+    //     .then(res=>res.json())
+    //     .then(data=>
+    //          this.setState({
+    //              products:data
+    //         }))
         // callApi(this.CONFIG.CATALOG_ITEM,"GET",null).then(res=>
         //     // this.setState({
         //     //      products:res.data
         //     // })
         //     console.log(res)
         //     );
-    }
+    // }
     render() { 
         // let product = this.state.products.map((data,key)=>{
         //     return <ProductItem

@@ -6,7 +6,11 @@ class CartComponent extends Component {
     return (
       <tr>
         <td>{data.product.productName}</td>
-        <td>{data.quantity}</td>
+        <td>
+        <input type="text" style={{height:35}} name="quantity" value={data.quantity}/>
+        </td>
+        {/* <td>{data.quantity}</td> */}
+        
         <td>
           <button
             className="btn btn-danger"

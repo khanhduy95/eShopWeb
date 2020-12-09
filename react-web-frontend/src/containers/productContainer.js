@@ -30,7 +30,10 @@ class ProductContainer extends Component {
     var { onAddToCart } = this.props;
     if (products.length > 0) {
       result = products.map((data, key) => {
-        return <ProductItem key={key} data={data} onAddToCart={onAddToCart} />;
+        return <ProductItem 
+          key={key} 
+          data={data} 
+          onAddToCart={onAddToCart} />;
       });
     }
     return result;

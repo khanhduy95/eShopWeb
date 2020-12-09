@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+
 class NavbarMenu extends Component {
   constructor(props) {
     super();
@@ -9,6 +11,7 @@ class NavbarMenu extends Component {
   }
 
   render() {
+    var {cartItems} = this.props;
     return (
       <nav className="navbar bg-light">
         <Link className="nav-link" to="/">
@@ -54,7 +57,7 @@ class NavbarMenu extends Component {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/Cart">
-              Cart
+              Cart {`(${cartItems.length})`}
             </Link>
           </li>
         </ul>
@@ -62,5 +65,13 @@ class NavbarMenu extends Component {
     );
   }
 }
-
-export default NavbarMenu;
+const mapStateToPros = (state) => {
+  // var pro=null;
+  // fetch("https://localhost:44349/api/CatalogItems")
+  // .then(res=>res.json())
+  // .then(data=>
+  //     prop = data
+  //  );
+  return { cartItems: state.cart };
+};
+export default connect(mapStateToPros,null)(NavbarMenu);
