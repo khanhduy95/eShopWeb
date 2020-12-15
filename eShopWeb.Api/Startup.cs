@@ -45,7 +45,7 @@ namespace eShopWeb.Api
                 options.AddPolicy(MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:3000")
+                                      builder.WithOrigins("http://192.168.1.11:3000")
                                                           .AllowAnyHeader()
                                                           .AllowAnyMethod()
                                                           .AllowCredentials();
@@ -67,5 +67,9 @@ namespace eShopWeb.Api
             });
             app.UseMvc();
         }
+    }
+    static class Extension
+    {
+       
     }
 }
