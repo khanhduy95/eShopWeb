@@ -1,12 +1,14 @@
 import './App.css';
 import { makeStyles, withStyles, CssBaseline } from "@material-ui/core";
+import SideBar from "../pages/Dashboard/sideBar";
+import Header from "../pages/Dashboard/header";
 
 
 function App() {
   return (
     <div>
-      <div style={{backgroundColor:"red",height:"auto",width:"100%",float:"right"}}>DEMo</div>
-      <div style={{backgroundColor:"blue",height:"100%",width:"320px",float:"left"}}><h1>sd</h1></div>
+      <SideBar />
+      <Header />
     </div>
   );
 }
