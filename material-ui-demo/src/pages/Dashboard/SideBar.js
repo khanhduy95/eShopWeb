@@ -1,10 +1,8 @@
 import { makeStyles, Menu, MenuItem, CssBaseline, Grid, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import * as routes from '../../constants/Routers';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import React from 'react';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import   * as Routes from '../../constants/Routers';
+
 const style = makeStyles({
     root: {
         backgroundColor: "#253053",
@@ -42,7 +40,7 @@ function SideBar() {
             <Grid className={classes.sideBarTop}><h1>Material UI</h1></Grid>
             <Grid>
                 <List>
-                    {routes.ROUTER.map((item, key) => {
+                    {Routes.ROUTER.map((item, key) => {
                         return <>
                             <ListItem
                                 button
@@ -55,32 +53,7 @@ function SideBar() {
                                 <ListItemText primary={item.name} />
 
                             </ListItem>
-                            <StyledMenu
-                                id="customized-menu"
-                                anchorEl={anchorEl}
-                                keepMounted
-                                open={Boolean(anchorEl)}
-                                onClose={handleClose}
-                            >
-                                <StyledMenuItem>
-                                    <ListItemIcon>
-                                        <SendIcon fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Sent mail" />
-                                </StyledMenuItem>
-                                <StyledMenuItem>
-                                    <ListItemIcon>
-                                        <DraftsIcon fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Drafts" />
-                                </StyledMenuItem>
-                                <StyledMenuItem>
-                                    <ListItemIcon>
-                                        <InboxIcon fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Inbox" />
-                                </StyledMenuItem>
-                            </StyledMenu>
+                              
                         </>
                     })}
                 </List>
