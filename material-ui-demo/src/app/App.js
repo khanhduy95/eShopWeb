@@ -1,15 +1,15 @@
 import './App.css';
 import { makeStyles, withStyles, CssBaseline } from "@material-ui/core";
-import SideBar from "../pages/Dashboard/sideBar";
-import Header from "../pages/Dashboard/header";
-
+import SideBar from "../pages/dashboard/sideBar";
+import Header from "../pages/dashboard/header";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <Router>
       <SideBar />
       <Header />
-    </div>
+    </Router>
   );
 }
 
