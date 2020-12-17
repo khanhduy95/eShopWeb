@@ -18,18 +18,16 @@ function Header() {
                 </Toolbar>
             </AppBar>
             <Grid className={classes.root}>
-                
-                    <Switch>
-                        {routes.ROUTER.map((route, key) => {
-                            return <Route
-                                key={key}
-                                exact={route.exact}
-                                component={route.main}
-                                path={route.path}
-                            />
-                        })}
-
-                    </Switch>
+                <Switch>
+                    {routes.ROUTER.map((route, key) => {
+                        return <Route
+                            key={key}
+                            exact={route.exact}
+                            component={route.main}
+                            path={route.path}
+                        />
+                    })}
+                </Switch>
             </Grid>
         </div>
     )

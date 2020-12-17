@@ -6,14 +6,14 @@ export const ROUTER = [
     {
         path: "/",
         name: "Home",
-        exact: "true",
+        exact: true,
         icon: <HomeIcon />,
         main: ()=> <HomePage />
     },
     {
         path: "/Menu",
         name: "Menu",
-        exact: "false",
+        exact: false,
         icon: <MenuIcon />,
         main: ()=> <MenuPage />
 
