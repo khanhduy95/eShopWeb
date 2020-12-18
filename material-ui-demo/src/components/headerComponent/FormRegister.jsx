@@ -13,7 +13,6 @@ const initialValues ={
 class FormRegister extends Component {
     
     render() {
-        const [x,setx] = useState();
         return (
             <div>
                 
