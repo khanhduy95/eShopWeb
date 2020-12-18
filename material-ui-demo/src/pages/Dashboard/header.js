@@ -19,7 +19,7 @@ const style = makeStyles({
     searchInput: {
         '&:hover': { backgroundColor: '#f2f2f2' }
     }
-})
+});
 function Header() {
     const classes = style();
     return (
