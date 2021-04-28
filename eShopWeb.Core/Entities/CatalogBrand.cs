@@ -7,6 +7,11 @@ namespace eShopWeb.Core.Entities
 {
     public class CatalogBrand : BaseEntity, IAggregateRoot
     {
+        /// <summary>
+        /// asdsdasd
+        /// asdasdads
+        /// asdasdsad
+        /// </summary>
         public int BrandID { get; set; }
         public string BrandName { get; set; }
         public CatalogBrand(int brandID, string brandName)
